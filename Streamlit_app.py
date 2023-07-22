@@ -153,7 +153,7 @@ def main():
     st.title("Webcam Snapshot Capture")
 
     webrtc_ctx = webrtc_streamer(
-        key="snapshot",
+        key="unique_snapshot_key",  # Modify the key to make it unique
         video_transformer_factory=SnapshotTransformer,
         async_transform=False,
     )
@@ -171,8 +171,3 @@ if __name__ == "__main__":
     main()
 
 
-
-
-
-if __name__ == "__main__":
-    main()
