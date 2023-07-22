@@ -29,9 +29,9 @@ def process_uploaded_image(uploaded_file):
 
 
 def process_camera_snapshot():
-    video_capture = cv2.VideoCapture(0)  
-    ret, frame = video_capture.read()
+    video_capture = cv2.VideoCapture(0)
     if ret:
+        ret, frame = video_capture.read()
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         image = Image.fromarray(frame)
         image = image.resize((RESIZE_WIDTH, RESIZE_HEIGHT))
